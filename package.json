@@ -1,0 +1,29 @@
+{
+  "name": "packageinfo",
+  "version": "1.0.0",
+  "description": "Exercise in the Keepcoding Master Bootcamp to get the version of the dependencies in a node app.",
+  "main": "index.js",
+  "dependencies": {
+    "async": "^1.4.2",
+    "express": "^4.13.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/gtrabanco/packageinfo.git"
+  },
+  "keywords": [
+    "package",
+    "info",
+    "node"
+  ],
+  "author": "Gabriel Trabanco Llano",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/gtrabanco/packageinfo/issues"
+  },
+  "homepage": "https://github.com/gtrabanco/packageinfo#readme"
+}
