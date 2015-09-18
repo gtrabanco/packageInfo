@@ -4,14 +4,7 @@
 (function(){
     console.log("Starting the app.");
 
-
-
-    function reportPackage(pkg) {
-        console.log("The package name is %s  and the version is v. %s", pkg.name, pkg.version);
-        console.log("The original author is %s", pkg.author);
-        console.log("And it has %d dependecies.", pkg.dependencies.length);
-    }
-
+    //A function to help with the reading of a package.json file
     function readPackageInfo(packageFile) {
 
         //First declare the return value var
@@ -44,6 +37,7 @@
         return packageInfo;
     }
 
+    //The exercise function
     function moduleVersion(module, callBack) {
         var path = require("path");
         var fs = require("fs");
@@ -66,6 +60,8 @@
         callBack(error, packageInfo);
     }
 
+    //The real program begin here
+    //Reading this package.json
     var currentPackage = readPackageInfo("package.json");
 
 
@@ -73,6 +69,7 @@
         console.log("For the current package %s (v. %s)", currentPackage.name, currentPackage.version);
         console.log("The dependencies are:");
 
+        //Reading the dependencies
         for (var module in currentPackage.dependencies) {
             var moduleInfo = moduleVersion(module, function(error, packageInfo) {
                 if (error) {
@@ -88,6 +85,5 @@
     } else {
         console.log("Could not read the package.json");
     }
-    //*/
 
 }());
